@@ -13,10 +13,13 @@ const Landing = () => {
           <Header />
 
           {/* Header(Subtext) */}
-          <div className="pt-[6rem] my-auto leading-[3rem] flex flex-col justify-center items-center ">
+          <div className="text-center pt-[6rem] my-auto leading-[3rem] flex flex-col justify-center items-center ">
             <h1 className="lg:text-3xl md:text-2xl text-xl">
-              Exclusive Deals of <br />
-              Furniture Collection
+              Exclusive Classic <br />
+              products <span className="italic text-primary-100">
+                tailored
+              </span>{" "}
+              just for you
             </h1>
             <p className="py-6 text-sm sm:text-base">
               Explore different categories. Find the best deals.
