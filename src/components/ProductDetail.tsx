@@ -83,12 +83,18 @@ const ProductDetail = () => {
             <p>Weight: {product?.itemVariants[0]?.weight || "N/A"} kg</p>
           </div>
 
-          <div className="my-3">
-            <p>Merchant SKU: {product?.itemVariants[0]?.merchantSku}</p>
-            <p>SKU: {product?.itemVariants[0]?.sku}</p>
+          <div className="my-3 text-sm opacity-70 border-b-2 pb-4">
+            <p className="mb-3">
+              <span className="text-gray-400">Merchant SKU:</span>{" "}
+              {product?.itemVariants[0]?.merchantSku}
+            </p>
+            <p>
+              <span className="text-gray-400">SKU:</span>{" "}
+              {product?.itemVariants[0]?.sku}
+            </p>
           </div>
 
-          <div className="">
+          <div className="mt-6">
             <div className="flex items-center">
               <Button
                 onClick={() => update("decrease")}

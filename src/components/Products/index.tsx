@@ -54,7 +54,7 @@ const ProductListContainer = () => {
           ...mainAction,
         },
       },
-      updateQuery: (prevResult, { fetchMoreResult }) => {
+      updateQuery: (_prevResult, { fetchMoreResult }) => {
         setIsLoading(false);
         return fetchMoreResult;
       },
