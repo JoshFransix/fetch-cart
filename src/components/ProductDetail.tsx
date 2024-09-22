@@ -34,7 +34,7 @@ const ProductDetail = () => {
     console.log(products);
     const activeProduct = products.find((p) => p.id === Number(params.id));
     setProduct(activeProduct as IProduct);
-    console.log(activeProduct);
+    // console.log(activeProduct);
   }, []);
   return (
     <div className="">

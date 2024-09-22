@@ -13,6 +13,7 @@ const Header = () => {
       <Link to="/">
         <p className="">Home</p>
       </Link>
+
       {/* <ShoppingCartIcon className="h-6 w-6 ml-4" /> */}
     </div>
   );

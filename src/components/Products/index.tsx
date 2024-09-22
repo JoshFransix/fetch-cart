@@ -66,6 +66,7 @@ const ProductListContainer = () => {
       "allProducts",
       JSON.stringify(data?.paginateItems?.data)
     );
+    window.dispatchEvent(new Event("storage"));
   }, [data]);
 
   return (

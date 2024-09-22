@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Search from "./Search";
 
 const Landing = () => {
   return (
@@ -20,9 +21,10 @@ const Landing = () => {
             <p className="py-6 text-sm sm:text-base">
               Explore different categories. Find the best deals.
             </p>
-            <button className="transition-element text-sm px-4 py-2 text-white bg-primary-100 rounded-md">
+            <Search />
+            {/* <button className="transition-element text-sm px-4 py-2 text-white bg-primary-100 rounded-md">
               Add Product
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

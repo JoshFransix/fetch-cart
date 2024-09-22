@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 // import { useState } from "react";
 import Button from "@mui/material/Button";
-import DeleteIcon from "@mui/icons-material/Delete";
+// import DeleteIcon from "@mui/icons-material/Delete";
 import PreviewIcon from "@mui/icons-material/Preview";
 
 interface ProductProps {
@@ -70,13 +70,18 @@ const Product: React.FC<ProductProps> = ({
         </h3>
       </div>
 
-      <div className="flex justify-around mt-6 border-black py-2 border-y-[1px]">
+      <div className="mt-6 border-black py-2 border-y-[1px]">
         <Link to={`/product/${id}`}>
-          <Button size="small" color="primary" startIcon={<PreviewIcon />}>
+          <Button
+            size="small"
+            color="primary"
+            fullWidth
+            startIcon={<PreviewIcon />}
+          >
             View
           </Button>
         </Link>
-        <Button
+        {/* <Button
           size="small"
           variant="outlined"
           color="error"
@@ -84,7 +89,7 @@ const Product: React.FC<ProductProps> = ({
           startIcon={<DeleteIcon />}
         >
           Delete
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

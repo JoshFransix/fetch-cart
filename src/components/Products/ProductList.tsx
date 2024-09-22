@@ -46,8 +46,6 @@ const Products: React.FC<Props> = ({ data, selectedFilter }) => {
   useEffect(() => {
     if (data) {
       filterProducts();
-      console.log(data);
-      console.log(allProducts);
     }
   }, [data]);
 
