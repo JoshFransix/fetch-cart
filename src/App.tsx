@@ -1,19 +1,25 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Products from "./components/Products/ProductList";
+import Landing from "./components/Landing";
+import Products from "./components/Products";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
-  // const [count, setCount] = useState(0);
-
+  const [products] = useState(JSON.parse(localStorage.getItem("allProducts")!));
   return (
     <Routes>
       <Route
         path="/"
         element={
           <>
+            <Landing />
             <Products />
           </>
         }
+      />
+      <Route
+        path="/product/:id"
+        element={<ProductDetail products={products} />}
       />
     </Routes>
   );

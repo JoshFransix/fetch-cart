@@ -1,9 +1,7 @@
-overwrite: true
 schema: "https://greenlineco.site/graphql"
-documents: "/src/components/**/*.{ts,tsx}"
+documents: "./src/components/**/*.ts"
 generates:
-  src/generated/graphql.tsx:
-    preset: "client"
+  src/generated/graphql.tsx/:
     plugins:
       - "typescript"
       - "typescript-operations"
