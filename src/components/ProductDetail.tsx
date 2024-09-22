@@ -5,44 +5,13 @@ import Button from "@mui/material/Button";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 
-interface itemVariants {
-  id: number;
-  sku: string;
-  name: string;
-  shopifyId: string;
-  merchantSku: string;
-  merchantId: number;
-  itemId: number;
-  isEnabled: boolean;
-  imageUrl: string;
-  price: string;
-  weight: string | null;
-  createdAt: string;
-  lastModified: string;
-  deletedAt: string;
-}
-
-interface ProductProp {
-  id: number | string;
-  merchantId: string;
-  name: string;
-  shopifyId: string;
-  description: string;
-  currency: string;
-  imageUrl: string;
-  createdAt: string;
-  lastModified: string;
-  itemVariants: itemVariants[];
-}
-
-interface ProductDetailProps {
-  products: Array<ProductProp>;
-}
-
-const ProductDetail = ({ products }: ProductDetailProps) => {
+const ProductDetail = () => {
   const params = useParams();
+  const [products] = useState<Array<IProduct>>(
+    JSON.parse(localStorage.getItem("allProducts")!)
+  );
   const [amount, setAmount] = useState<number>(1);
-  const [product, setProduct] = useState<ProductProp>();
+  const [product, setProduct] = useState<IProduct>();
 
   const update = (value: string) => {
     let newAmount = amount;
@@ -64,7 +33,7 @@ const ProductDetail = ({ products }: ProductDetailProps) => {
     console.log(params.id);
     console.log(products);
     const activeProduct = products.find((p) => p.id === Number(params.id));
-    setProduct(activeProduct as ProductProp);
+    setProduct(activeProduct as IProduct);
     console.log(activeProduct);
   }, []);
   return (
@@ -81,8 +50,8 @@ const ProductDetail = ({ products }: ProductDetailProps) => {
             className="h-[500px] w-full rounded-xl"
             style={{
               background: `url(${
-                product?.imageUrl
-                  ? `${product?.imageUrl}`
+                product?.itemVariants[0]?.imageUrl
+                  ? `${product?.itemVariants[0]?.imageUrl}`
                   : "/landing-image.jpg"
               }) no-repeat center center/cover`,
             }}

@@ -5,13 +5,13 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import PreviewIcon from "@mui/icons-material/Preview";
 
 interface ProductProps {
-  id: number;
+  id: number | string;
   title: string;
   image?: string | null;
   currency: string | null;
   isAvailable: boolean;
   description?: string | null;
-  price: number;
+  price: string | number;
   color?: string; // Optional prop to set custom color for product background. Default is #CAF3E5.
 }
 
