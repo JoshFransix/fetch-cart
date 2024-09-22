@@ -48,3 +48,6 @@ export default tseslint.config({
   },
 })
 ```
+
+## Minor Note
+The search functionality is configured to display only the most recent products which are fetched from the GRAPHQL server and not the entirety of products in the database.
