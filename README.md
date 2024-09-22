@@ -1,3 +1,23 @@
+# FetchCart
+
+Fetch cart is a simple but unique website that lets you view amazing products, backed up with some cool functionalities.
+
+## How To Setup
+Firstly, Clone this repository.
+
+Then open up your terminal and run the following commands:
+```js
+// Install dependencies needed
+npm install
+
+// Generate graphql file for API requests and component management
+npm run codegen
+
+// Start your server
+npm start
+```
+Your server should be live on [http://localhost:5173](http://localhost:5173)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
